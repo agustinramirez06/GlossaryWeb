@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
+    <title>GlossaryWeb - Términos Técnicos</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📚 GlossaryWeb</h1>
+        <p class="subtitle">Glosario de términos técnicos en desarrollo web</p>
+      </header>
+      
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar término..."
+          autocomplete="off"
+        />
+        <span id="resultCount" class="result-count"></span>
+      </div>
+      
+      <div class="button-container">
+        <button id="createBtn" class="btn btn-create">➕ Crear</button>
+        <button id="updateBtn" class="btn btn-update">✏️ Actualizar</button>
+        <button id="deleteBtn" class="btn btn-delete">🗑️ Eliminar</button>
+      </div>
+      
+      <div id="definitionsContainer" class="definitions-container">
+        <div class="loading">Cargando definiciones...</div>
+      </div>
+
+      <footer class="footer-min">
+        <div class="footer-content">
+          <p class="footer-text">© Created by Agustin Ramirez</p>
+          
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/agustinramirez06" target="_blank" rel="noopener noreferrer" class="social-icon" title="Linkedin">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/agustinramirez06" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/2241568193" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/agustinramirez06" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modal Formulario -->
+    <div id="formContainer" class="form-modal">
+      <div class="form-modal-content">
+        <h2 id="modalTitle">Crear nuevo término</h2>
+        
+        <form id="definitionForm">
+          <div class="form-group">
+            <label for="terminoInput">Término:</label>
+            <input 
+              type="text" 
+              id="terminoInput" 
+              placeholder="Ej: API" 
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="definicionInput">Definición:</label>
+            <textarea 
+              id="definicionInput" 
+              placeholder="Ingresa la definición aquí..." 
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn btn-submit">Guardar</button>
+            <button type="button" id="cancelBtn" class="btn btn-cancel">Cancelar</button>
+            <button type="button" class="btn btn-delete" id="deleteFormBtn">🗑️ Eliminar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

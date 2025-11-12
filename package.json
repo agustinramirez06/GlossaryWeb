@@ -1,0 +1,26 @@
+{
+  "name": "glossaryweb",
+  "version": "1.0.0",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agustinramirez06/GlossaryWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agustinramirez06/GlossaryWeb/issues"
+  },
+  "homepage": "https://github.com/agustinramirez06/GlossaryWeb#readme",
+  "description": "",
+  "dependencies": {
+    "mongoose": "^8.19.3",
+    "nodeman": "^1.1.2"
+  }
+}
